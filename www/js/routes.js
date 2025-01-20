@@ -21,65 +21,141 @@ var app = new Framework7({
       path: '/index/',
       url: 'index.html',
       animate: false,
-	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
-		pageAfterIn: function (event, page) {
-		// fazer algo depois da página ser exibida
-		},
-		pageInit: function (event, page) {
-		// fazer algo quando a página for inicializada
-		},
-		pageBeforeRemove: function (event, page) {
-		// fazer algo antes da página ser removida do DOM
-		},
-	  }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+          $.getScript('js/index.js');
+
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,// Qt de imagens no swiper
+            spaceBetween: 30, // Espaçamento das imagens
+            freeMode: false,// Modo de arrastar Livre
+            autoplay: true,// Auto play ativado
+            delay: 3000,//  3segundos para rolagem
+            loop: true,// Loop de inicialização de rolagem
+            breakpoints: {
+              50: {
+                slidesPerView: 1,
+                spaceBetween: 30
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              992: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              },
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 30
+              }
+            },
+            pagination: {//Icones de ponto de paginação
+              el: ".swiper-pagination",
+              clickable: true,//Clicavel
+            },
+          });
+
+          var swiper2 = new Swiper(".categorias", {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            breakpoints: {
+              50: {
+                slidesPerView: 3,
+                spaceBetween: 10
+              },
+              640: {
+                slidesPerView: 6,
+                spaceBetween: 10
+              },
+              992: {
+                slidesPerView: 8,
+                spaceBetween: 10
+              },
+              1200: {
+                slidesPerView: 12,
+                spaceBetween: 10
+              }
+            },
+          });
+
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
     {
-      path: '/link2/',
-      url: 'link2.html',
+      path: '/vremulator/',
+      url: 'vremulator.html',
       animate: false,
-	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
-		pageAfterIn: function (event, page) {
-		// fazer algo depois da página ser exibida
-		},
-		pageInit: function (event, page) {
-		// fazer algo quando a página for inicializada
-		},
-		pageBeforeRemove: function (event, page) {
-		// fazer algo antes da página ser removida do DOM
-		},
-	  }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+          $.getScript('js/vremulator.js');
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
     {
       path: '/link3/',
       url: 'link3.html',
       animate: false,
-	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
-		pageAfterIn: function (event, page) {
-		// fazer algo depois da página ser exibida
-		},
-		pageInit: function (event, page) {
-		// fazer algo quando a página for inicializada
-		},
-		pageBeforeRemove: function (event, page) {
-		// fazer algo antes da página ser removida do DOM
-		},
-	  }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
+    },
+    {
+      path: '/link4/',
+      url: 'link4.html',
+      animate: false,
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
   ],
   // ... other parameters
 });
 
 //Para testes direto no navegador
-//var mainView = app.views.create('.view-main', { url: '/index/' });
+var mainView = app.views.create('.view-main', { url: '/index/' });
 
 //EVENTO PARA SABER O ITEM DO MENU ATUAL
 app.on('routeChange', function (route) {
