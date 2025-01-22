@@ -19,5 +19,8 @@
     "platforms": [
       "android"
     ]
+  },
+  "dependencies": {
+    "br.com.hbproducoes.greentech": "file:"
   }
 }

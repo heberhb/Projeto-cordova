@@ -10,7 +10,7 @@
     <!-- Color theme for statusbar (Android only) -->
     <meta name="theme-color" content="#2196f3">
     <!-- Your app title -->
-    <title>Template Tab</title>
+    <title>Página Inicial</title>
     <!-- Path to Framework7 Library Bundle CSS -->
     <link rel="stylesheet" href="lib/framework7-bundle.min.css">
     <!-- CSS PERSONALIZADO PARA MENU-->
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
     <!--icones do remixicon-->
     <link rel="stylesheet" href="css/remixicon/remixicon.css">
+    <link rel="stylesheet" href="css/detalhes.css">
 
 
 </head>
@@ -31,21 +32,21 @@
         <div class="view view-main">
 
             <!-- TAB BAR-->
-            <div class="toolbar toolbar-bottom">
+            <div id="menu-principal" class="toolbar toolbar-bottom">
                 <div class="toolbar-inner display-flex">
                     <a href="/index/" class="tab-link link active">
                         <i class="ri-home-5-line"></i><!--ícones escolhido para a tag-->
                         <span>Home</span>
                     </a>
-                    <a href="/vremulator/" class="tab-link link">
+                    <a href="/busca/" class="tab-link link">
                         <i class="ri-search-2-line"></i><!--ícones escolhido para a tag-->
                         <span>Busca</span>
                     </a>
-                    <a href="/link3/" class="tab-link link">
+                    <a href="/favoritos/" class="tab-link link">
                         <i class="ri-heart-3-line"></i><!--ícones escolhido para a tag-->
                         <span>Favoritos</span>
                     </a>
-                    <a href="/link4/" class="tab-link link">
+                    <a href="/usuario/" class="tab-link link">
                         <i class="ri-user-line"></i><!--ícones escolhido para a tag-->
                         <span>Usuário</span>
                     </a>
@@ -57,7 +58,7 @@
 
                 <!-- Top Navbar -->
                 <div class="top-nav">
-                    <h1 class="title-logo"><span>Green</span>Tech</h1>
+                    <h1 class="title-logo"><span>Info</span>Shipp</h1>
                     <a href="#" class="btn-cart" data-count="1">
                         <i class="ri-shopping-bag-line"></i>
                     </a>
@@ -172,7 +173,7 @@
                         <div id="produtos" class="row margin-top display-flex align-items-center justify-content-start">
                             <!-- Item Card -->
                             <div class="item-card">
-                                <a href="#" class="item">
+                                <a href="/detalhes/" class="item">
                                     <div class="img-container">
                                         <img src="img/xbox.png" alt="">
                                     </div>
