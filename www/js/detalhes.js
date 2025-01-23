@@ -12,8 +12,8 @@ if (item) {
     console.log('produto Encontrado', item);
 
     //Alimentar com os valores do Item
-    $("#promo-detalhes").html(item.preco_promocional);
-    $("#price-detalhes").html(item.preco);
+    $("#promo-detalhes").html(item.preco_promocional.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}));
+    $("#price-detalhes").html(item.preco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}));
     $("#img-detalhes").attr('src', item.imagem);
     $("#descricao-produto").html(item.descricao);
     $("#nome-produto").html(item.nome);
@@ -38,7 +38,17 @@ if (item) {
     console.log('Produto não encontrado');
 }
 
+var carrinho = JSON.parse(localStorage.getItem(carrinho)) || [];
 
+//Função para adicionar produto ao carrinho
+function addCarrinho(item,quantidade) {
+    var ItenNoCarrinho = carrinho.find(c => c.item.id === item.id);
+
+    if(ItenNoCarrinho){
+        ItenNoCarrinho.quantidade += quantidade;
+        
+    }
+}
 
 
 
