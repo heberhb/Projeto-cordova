@@ -4,7 +4,7 @@ fetch('js/backend.json')
         // Salvar os dados vindos do back-end localmente
         // Vamos Utilizar o LocalStorage
 
-        //'produtos' é o apelido do objeto que está salvando localmente 
+        //'produto' é o apelido do objeto que está salvando localmente 
         localStorage.setItem('produto', JSON.stringify(data));
         console.log("Dados Salvo no localStorage");
 
@@ -50,12 +50,13 @@ fetch('js/backend.json')
                 //Armazendo id atribuido data-id na classe $(this) => Item , e adicionando na variavel Id
                 var id = $(this).attr('data-id');
                 //Adicionando o id com o apelido detalhes para redirecionar para o HTML Detalhes
-                localStorage.setItem("detalhes", id);
+                localStorage.setItem('detalhes', id);
+                console.log('Id Salvo no LocalStorage', id)
+                
 
                 app.views.main.router.navigate('/detalhes/');
+                console.log(produtos)
             });
-
-
             // Tempo para carregamento da simulação online
         }, 3000);
     })

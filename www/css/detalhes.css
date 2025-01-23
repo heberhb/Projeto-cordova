@@ -114,7 +114,8 @@ td{
 }
 
 th{
-    background: #ddd;
+    background: #ebebeb;
+    padding: 10px 1px;
 }
 
 .flex-40{
