@@ -62,3 +62,10 @@ fetch('js/backend.json')
     })
     // Caso ocorra um erro ao carregar a lista de produtos, esse código de erro é acionado
     .catch(error => console.error('Erro ao fazer fetch dos dados'));
+
+    //Ver qwuantos itens tem dentro do carrinho
+    setTimeout(() => {
+        var carrinho = JSON.parse(localStorage.getItem('carrinho'));
+        //Alimentar a sacolinha do carrinho 
+        $('.btn-cart').attr('data-count', carrinho.length);
+    },3000 );
