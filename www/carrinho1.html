@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Color theme for statusbar (Android only) -->
+        <meta name="theme-color" content="#2196f3">
+        <!-- Your app title -->
+        <title>Carrinho</title>
+        <!-- Path to Framework7 Library Bundle CSS -->
+        <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+        <!-- CSS PERSONALIZADO PARA MENU-->
+        <link rel="stylesheet" href="css/index.css">
+        <!--Ícones Material Design-->
+        <link rel="stylesheet" href="css/materialdesignicons.min.css">
+        <!--icones do remixicon-->
+        <link rel="stylesheet" href="css/remixicon/remixicon.css">
+        <link rel="stylesheet" href="css/carrinho.css">
+    
+    </head>
+    
+    <body>
+        <!-- App root element -->
+        <div id="app">
+    
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+
+                <!-- Initial Page, "data-name" contains page name -->
+                <div data-name="carrinho" class="page color-theme-blue">
+                    <div class="page-carrinho margin">
+                        <div class="prod-car">
+                            <div class="img-carrinho margin">
+                                <img class="img-fluid" src="img/airpod.png" alt="">
+                            </div>
+                            <div class="prod-info">
+                                <span>
+                                    <h2 class="text-center">AirPods</h2>
+                                    <p class="text-center">R$ 1.500,00</p>
+                                    <p class="text-center">Quantidade: <span id="quantidade">1</span>
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="variacao-prod">
+                                <div class="item-input-wrap input-dropdown-wrap">
+                                    <select>
+                                        <option value="Escolha">Escolha</option>
+                                        <option value="Branco">Branco</option>
+                                        <option value="Preto">Preto</option>
+                                        <option value="Prata">Prata</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="quantidade-prod">
+                                <label for="quantidade">Quantidade:</label>
+                                <div class="item-input-wrap">
+                                    <input type="number" placeholder="Your phone number">
+                                    <span class="input-clear-button"></span>
+                                </div>
+                                <label>Total: <span>$ ****</span></label>
+                            </div>
+                            <div class="btn-carrinho">
+                                <button class="col button button-fill color-red">Excluir</button>
+                            </div>
+                        </div>
+                        <div class="prod-car">
+                            <div class="img-carrinho margin">
+                                <img class="img-fluid" src="img/iphone.png" alt="">
+                            </div>
+                            <div class="prod-info">
+                                <span>
+                                    <h2 class="text-center">Iphone 16 Pro Max</h2>
+                                    <p class="text-center">R$ 15.000,00</p>
+                                    <p class="text-center">Quantidade: <span id="quantidade">1</span>
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="variacao-prod">
+                                <div class="item-input-wrap input-dropdown-wrap">
+                                    <select>
+                                        <option value="Escolha">Escolha</option>
+                                        <option value="Branco">Branco</option>
+                                        <option value="Preto">Preto</option>
+                                        <option value="Prata">Prata</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="quantidade-prod">
+                                <label for="quantidade">Quantidade:</label>
+                                <div class="item-input-wrap">
+                                    <input type="number" placeholder="Your phone number">
+                                    <span class="input-clear-button"></span>
+                                </div>
+                                <label>Total: <span>$ ****</span></label>
+                            </div>
+                            <div class="btn-carrinho">
+                                <button class="col button button-fill color-red">Excluir</button>
+                            </div>
+                        </div>
+                        <div class="prod-car">
+                            <div class="img-carrinho margin">
+                                <img class="img-fluid" src="img/xbox.png" alt="">
+                            </div>
+                            <div class="prod-info">
+                                <span>
+                                    <h2 class="text-center">Xbox Séries S </h2>
+                                    <p class="text-center">R$ 1.500,00</p>
+                                    <p class="text-center">Quantidade: <span id="quantidade">1</span>
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="variacao-prod">
+                                <div class="item-input-wrap input-dropdown-wrap">
+                                    <select>
+                                        <option value="Escolha">Escolha</option>
+                                        <option value="Branco">Branco</option>
+                                        <option value="Preto">Preto</option>
+                                        <option value="Prata">Prata</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="quantidade-prod">
+                                <label for="quantidade">Quantidade:</label>
+                                <div class="item-input-wrap">
+                                    <input type="number" placeholder="Your phone number">
+                                    <span class="input-clear-button"></span>
+                                </div>
+                                <label>Total: <span>$ ****</span></label>
+                            </div>
+                            <div class="btn-carrinho">
+                                <button class="col button button-fill color-red">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Path to Framework7 Library Bundle JS-->
+        <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+        <!-- jQuery -->
+        <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+        <!-- Roteamento do app-->
+        <script type="text/javascript" src="js/routes.js"></script>
+        <script src="cordova.js"></script>
+    </body>
+</html>

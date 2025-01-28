@@ -45,6 +45,12 @@
           "-webkit-mask-box-image"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
     ]
   }
 }

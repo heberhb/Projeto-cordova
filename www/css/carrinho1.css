@@ -1,0 +1,192 @@
+:root{
+    --branco:#ffff;
+    --gelo:#ececec;
+    --verde: #19c463;
+    --preto:#2a2a2a;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    font-family: "Bebas Neue",sans-serif;
+}
+
+.page-carrinho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.prod-car{
+    background: var(--gelo);
+    margin: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    border: 1px solid rgb(172, 168, 168);
+    width: 50%;
+    height: 135px;
+}
+
+.img-carrinho{
+    width: 15%;
+}
+
+.img-carrinho img{
+    width:110px;
+    height:95px;
+}
+
+.quantidade-prod{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+    font-size: 14px;
+}
+
+.quantidade-prod input{
+    background: var(--branco);
+    border: 1px solid black;
+    width: 50px;
+}
+
+.item-input-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prod-info{
+    width: 25%;
+}
+
+.btn-carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-carrinho p{
+    display: flex;
+    width: 100%;
+    padding-left: 50%;   
+    margin: 2px; 
+}
+
+.btn-carrinho button{
+    width: auto;
+    height: auto;
+    margin-right: 5px; 
+}
+
+@media (min-width: 220px ){
+    .prod-car{
+        width: 100%;
+    }
+
+    .img-carrinho img{
+        width:60px;
+        height:55px;
+    }
+
+    .prod-info{
+        width: 25%;
+        font-size: 10px;
+    }
+    
+    .quantidade-prod{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        font-size: 10px;
+    }
+
+    .quantidade-prod input{
+        width: 50px;
+        font-size: 10x;
+    }
+
+    .btn-carrinho button{
+        width: 70%;
+        height: 20px;
+    }
+}
+
+@media (min-width: 880px ){
+    .prod-car{
+        width: 80%;
+    }
+
+    .img-carrinho img{
+        width:90px;
+        height:85px;
+    }
+
+    .prod-info{
+        width: 25%;
+        font-size: 12px;
+    }
+
+    .quantidade-prod{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 25%;
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 1020px ){
+    .prod-car{
+        width: 70%;
+    }
+
+    .img-carrinho img{
+        width:110px;
+        height:95px;
+    }
+
+    .prod-info{
+        width: 25%;
+        font-size: 14px;
+    }
+
+    .quantidade-prod{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 25%;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1480px ){
+    .prod-car{
+        width: 60%;
+    }
+
+    .img-carrinho img{
+        width:130px;
+        height:125px;
+    }
+
+    .prod-info{
+        width: 25%;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+

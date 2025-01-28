@@ -1,180 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags-->
-        <meta charset="utf-8">
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <!-- Color theme for statusbar (Android only) -->
-        <meta name="theme-color" content="#2196f3">
-        <!-- Your app title -->
-        <title>Carrinho</title>
-        <!-- Path to Framework7 Library Bundle CSS -->
-        <link rel="stylesheet" href="lib/framework7-bundle.min.css">
-        <!-- CSS PERSONALIZADO PARA MENU-->
-        <link rel="stylesheet" href="css/index.css">
-        <!--Ícones Material Design-->
-        <link rel="stylesheet" href="css/materialdesignicons.min.css">
-        <!--icones do remixicon-->
-        <link rel="stylesheet" href="css/remixicon/remixicon.css">
-        <link rel="stylesheet" href="css/carrinho.css">
-    
-    </head>
-    
-    <body>
-        <!-- App root element -->
-        <div id="app">
-    
-            <!-- Your main view, should have "view-main" class -->
-            <div class="view view-main">
-    
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Página Inicial</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <!--icones do remixicon-->
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="carrinho" class="page color-theme-blue">
+
+                <div class="nav-cart-top">
+                    <a href="/index/"><i class="ri-arrow-left-s-fill"></i></a>
+                    <strong> <i class="ri-shopping-cart-2-line"></i> Carrinho</strong>
+                    <a href="#"><i class="ri-more-fill"></i></a>
+                </div>
+
                 <!-- TAB BAR-->
-                <div id="menu-principal" data-name="carrinho" class="toolbar toolbar-bottom">
-                    <div class="toolbar-inner display-flex">
-                        <a href="/index/" class="tab-link link active">
-                            <i class="ri-home-5-line"></i><!--ícones escolhido para a tag-->
-                            <span>Home</span>
-                        </a>
-                        <a href="/busca/" class="tab-link link">
-                            <i class="ri-search-2-line"></i><!--ícones escolhido para a tag-->
-                            <span>Busca</span>
-                        </a>
-                        <a href="/favoritos/" class="tab-link link">
-                            <i class="ri-heart-3-line"></i><!--ícones escolhido para a tag-->
-                            <span>Favoritos</span>
-                        </a>
-                        <a href="/usuario/" class="tab-link link">
-                            <i class="ri-user-line"></i><!--ícones escolhido para a tag-->
-                            <span>Usuário</span>
-                        </a>
+                <div id="menu-principal" class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner display-flex align-content-center justify-content-center">
+                        <div class="flex-40 text-align-center">
+                            <span id="promo-detalhes" class="riscado color-gray">R$ 1400</span>
+                            <h3 id="price-detalhes" class="pricing no-padding no-margin">R$ 1200</h3>
+                        </div>
+                        <div class="flex-60">
+                            <button class="add-cart">Adicionar Carrinho</button>
+                        </div>
                     </div>
                 </div>
-                <!-- Initial Page, "data-name" contains page name -->
-                <div data-name="carrinho" class="page color-theme-blue">
-                    <div class="page-carrinho margin">
-                        <div class="prod-car">
-                            <div class="img-carrinho margin">
-                                <img src="/www/img/airpod.png" alt="" width="110px" height="95px">
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div id="lista-carrinho" class="lista-carrinho">
+                        <!-- Item Carrinho-->
+                         <div class="item-carrinho">
+                            <div class="img-area">
+                                <img src="img/default.png" alt="">
                             </div>
-                            <div class="prod-info">
-                                <span>
-                                    <h2 class="text-center">AirPods</h2>
-                                    <p class="text-center">R$ 1.500,00</p>
-                                    <p class="text-center">Quantidade: <span id="quantidade">1</span>
-                                    </p>
-                                </span>
-                            </div>
-                            <div class="variacao-prod">
-                                <div class="item-input-wrap input-dropdown-wrap">
-                                    <select>
-                                        <option value="Escolha">Escolha</option>
-                                        <option value="Branco">Branco</option>
-                                        <option value="Preto">Preto</option>
-                                        <option value="Prata">Prata</option>
-                                    </select>
+                            <div class="area-details">
+                                <div class="sup">
+                                    <span class="name-prod">
+                                        XBox Series X rghgfhdfghgfhgfhgdhfghdfghubnskfgjsndçfg
+                                    </span>
+                                    <a class="delete-item" href="#">
+                                        <i class="mdi mdi-close"></i>
+                                    </a>
+                                </div>
+                                <div class="midle">
+
+                                </div>
+                                <div class="preco-qt">
+
                                 </div>
                             </div>
-                            
-                            <div class="quantidade-prod">
-                                <label for="quantidade">Quantidade:</label>
-                                <div class="item-input-wrap">
-                                    <input type="number" placeholder="Your phone number">
-                                    <span class="input-clear-button"></span>
-                                </div>
-                                <label>Total: <span>$ ****</span></label>
-                            </div>
-                            <div class="btn-carrinho">
-                                <p class="row margin:10">
-                                    <button class="col button button-fill color-red">Excluir</button>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="prod-car">
-                            <div class="img-carrinho margin">
-                                <img src="/www/img/iphone.png" alt="" width="110px" height="95px">
-                            </div>
-                            <div class="prod-info">
-                                <span>
-                                    <h2 class="text-center">Iphone 16 Pro Max</h2>
-                                    <p class="text-center">R$ 15.000,00</p>
-                                    <p class="text-center">Quantidade: <span id="quantidade">1</span>
-                                    </p>
-                                </span>
-                            </div>
-                            <div class="variacao-prod">
-                                <div class="item-input-wrap input-dropdown-wrap">
-                                    <select>
-                                        <option value="Escolha">Escolha</option>
-                                        <option value="Branco">Branco</option>
-                                        <option value="Preto">Preto</option>
-                                        <option value="Prata">Prata</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="quantidade-prod">
-                                <label for="quantidade">Quantidade:</label>
-                                <div class="item-input-wrap">
-                                    <input type="number" placeholder="Your phone number">
-                                    <span class="input-clear-button"></span>
-                                </div>
-                                <label>Total: <span>$ ****</span></label>
-                            </div>
-                            <div class="btn-carrinho">
-                                <p class="row margin:10">
-                                    <button class="col button button-fill color-red">Excluir</button>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="prod-car">
-                            <div class="img-carrinho margin">
-                                <img src="/www/img/xbox.png" alt="" width="110px" height="95px">
-                            </div>
-                            <div class="prod-info">
-                                <span>
-                                    <h2 class="text-center">Xbox Séries S </h2>
-                                    <p class="text-center">R$ 1.500,00</p>
-                                    <p class="text-center">Quantidade: <span id="quantidade">1</span>
-                                    </p>
-                                </span>
-                            </div>
-                            <div class="variacao-prod">
-                                <div class="item-input-wrap input-dropdown-wrap">
-                                    <select>
-                                        <option value="Escolha">Escolha</option>
-                                        <option value="Branco">Branco</option>
-                                        <option value="Preto">Preto</option>
-                                        <option value="Prata">Prata</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="quantidade-prod">
-                                <label for="quantidade">Quantidade:</label>
-                                <div class="item-input-wrap">
-                                    <input type="number" placeholder="Your phone number">
-                                    <span class="input-clear-button"></span>
-                                </div>
-                                <label>Total: <span>$ ****</span></label>
-                            </div>
-                            <div class="btn-carrinho">
-                                <p class="row margin:10">
-                                    <button class="col button button-fill color-red">Excluir</button>
-                                </p>
-                            </div>
-                        </div>
+                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+</body>
 
-        <!-- Path to Framework7 Library Bundle JS-->
-        <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
-        <!-- jQuery -->
-        <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
-        <!-- Roteamento do app-->
-        <script type="text/javascript" src="js/routes.js"></script>
-        <script src="cordova.js"></script>
-    </body>
 </html>
